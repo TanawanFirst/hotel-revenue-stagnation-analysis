@@ -64,4 +64,12 @@
 | is_weekend | เป็นวันหยุดสุดสัปดาห์หรือไม่ | Nominal (Binary) | True / False                             |
 | is_holiday | เป็นวันหยุดนักขัตฤกษ์หรือไม่ | Nominal (Binary) | True / False                             |
 | season     | ฤดูกาล                       | Nominal          | High Season, Low Season, Shoulder Season |
-
+# ตัวแปรเป้าหมาย (Target Variable)
+- total_room_revenue
+# ตัวแปรสำคัญที่ใช้วิเคราะห์ (Key Features)
+- กลุ่มวันเวลา (Time Features)
+- กลุ่มการจอง (Booking Characteristics)
+- กลุ่มลูกค้า (Customer Features)
+- กลุ่มรายได้และราคา (Pricing & Revenue Drivers)
+- ช่องทางการขาย (Channel Features)
+- ประเภทห้อง (Product Features)
