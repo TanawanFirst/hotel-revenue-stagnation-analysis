@@ -47,12 +47,14 @@
 # Data Dictionary: dim_rate_codes
 | Attribute         | คำอธิบาย                  | Data Type        | ช่วงค่าที่ถูกต้อง / ตัวอย่าง |
 | ----------------- | ------------------------- | ---------------- | ---------------------------- |
+| rate_code_id      | รหัสแผนราคา (Primary Key) | Ordinal          | RC_CORP                      |
 | rate_name         | ชื่อแผนราคา               | Nominal          | Corporate Flat Rate          |
 | description       | รายละเอียดแผนราคา         | Nominal (Text)   | Includes Breakfast & Wifi    |
 | is_commissionable | มีค่าคอมมิชชั่นหรือไม่    | Nominal (Binary) | True / False                 |
 # Data Dictionary: dim_channels
 | Attribute       | คำอธิบาย                  | Data Type          | ช่วงค่าที่ถูกต้อง / ตัวอย่าง |
 | --------------- | ------------------------- | ------------------ | ---------------------------- |
+| channel_id      | รหัสช่องทาง (Primary Key) | Ordinal            | CH_EXP                       |
 | channel_name    | ชื่อช่องทาง               | Nominal            | Expedia, Agoda               |
 | channel_type    | ประเภทช่องทาง             | Nominal            | OTA, Direct, Wholesaler      |
 | commission_rate | อัตราค่าคอมมิชชั่น        | Ratio (Continuous) | 0 – 1 (เช่น 0.15)            |
