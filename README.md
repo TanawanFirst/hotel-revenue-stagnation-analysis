@@ -459,32 +459,37 @@
 ```
 hotel-revenue-stagnation-analysis/
 │
-├── README.md                  # เอกสารโครงการฉบับนี้
+├── README.md                        # เอกสารโครงการฉบับนี้
 │
-├── H1.H3,H5.xlsx              # ไฟล์วิเคราะห์หลัก H1, H3, H5
-│   ├── h1 / h1.1 / h1.2 / h1.3    → OTA Dependency & Commission Analysis
-│   ├── h3 / h3.1 / h3.2 / h3.3    → Rate Code Dilution Analysis
-│   ├── h5 / h5.1                    → Short LOS & Orphan Nights Analysis
-│   ├── fact_bookings                 → ข้อมูลการจองหลัก (10,000 rows)
-│   ├── dim_room_inventory            → Capacity ห้องรายวัน
-│   ├── dim_rate_codes                → แผนราคา
-│   ├── dim_channels                  → ช่องทางการจองและ commission
-│   └── dim_calendar                  → Date dimension (season, day_name, is_weekend)
+├── Data/                            # ข้อมูลดิบ (Raw Data)
+│   ├── fact_bookings.csv            → ข้อมูลการจองหลัก (10,000 rows)
+│   ├── dim_room_inventory.csv       → Capacity ห้องรายวัน
+│   ├── dim_rate_codes.csv           → ประเภทราคา
+│   ├── dim_channels.csv             → ช่องทางการจองและ commission
+│   └── dim_calendar.csv             → Date dimension (season, day_name, is_weekend)
 │
-├── H2,H4.xlsx                 # ไฟล์วิเคราะห์ H4
-│   ├── H4                           → BLT vs Cancellation/No-Show Rate
-│   ├── H2.1 / H2.2 / H2.3 / H2.4   → Day of Week Analysis (ข้อมูลอ้างอิง)
-│   └── fact_bookings (4)             → ชุดข้อมูลสำรอง
+├── H1.H3.H5.xlsx                    # ไฟล์วิเคราะห์หลัก H1, H3, H5
+│   ├── h1 / h1.1 / h1.2 / h1.3     → H1: OTA Dependency & Commission Analysis
+│   ├── h3 / h3.1 / h3.2 / h3.3     → H3: Rate Code Dilution Analysis
+│   ├── h5 / h5.1                    → H5: Short LOS & Orphan Nights Analysis
+│   ├── fact_bookings                → ข้อมูลการจองหลัก (10,000 rows)
+│   ├── dim_room_inventory           → Capacity ห้องรายวัน
+│   ├── dim_rate_codes               → ประเภทราคา
+│   ├── dim_channels                 → ช่องทางการจองและ commission
+│   ├── dim_calendar                 → Date dimension
+│   ├── new_dash                     → Dashboard สรุปภาพรวม
+│   └── revpar                       → RevPAR Impact Analysis (H6)
 │
-├── H_Charts.xlsx              # Charts สรุปผลการวิเคราะห์ทุก Hypothesis
-│   ├── H1                           → ADR vs Net ADR + Commission Loss by Channel
-│   ├── H3                           → ADR by Rate Code × Season + Revenue Loss
-│   ├── H4                           → Cancellation Rate by BLT Group
-│   ├── H5                           → % LOS=1 on Weekend + Avg LOS by Segment
-│   ├── RL_H4                        → Revenue Lost from Cancellation & No-Show
-│   └── (H2 ถูกนำออกจากขอบเขตโครงการ)
+├── H2.H4.xlsx                       # ไฟล์วิเคราะห์ H2, H4
+│   ├── H4                           → H4: BLT vs Cancellation/No-Show Rate
+│   └── H2.1 / H2.2 / H2.3 / H2.4   → H2: Day of Week & Pricing Analysis
 │
-├── Data/                      # ข้อมูลต้นทาง (raw data)
+└── H_Charts.xlsx                    # Charts สรุปผลการวิเคราะห์ทุก Hypothesis
+    ├── H1                           → ADR vs Net ADR + Commission Loss by Channel
+    ├── H3                           → ADR by Rate Code × Season + Revenue Loss
+    ├── H4                           → Cancellation Rate by BLT Group
+    ├── H5                           → % LOS=1 on Weekend + Avg LOS by Segment
+    └── RL_H4                        → Revenue Lost from Cancellation & No-Show
 └── คำสั่ง.pdf                  # โจทย์และคำสั่งโครงการ DS512-513
 ```
 
