@@ -1,0 +1,6 @@
+rate_code_id,rate_name,description,is_commissionable
+RC_RACK,Rack Rate,Standard published rate,False
+RC_AAA,AAA Discount,10% off for AAA members,False
+RC_CORP,Corporate Flat Rate,Includes Breakfast & Wifi,True
+RC_NRF,Non-Refundable,20% discount no cancellation,False
+RC_PROMO,Seasonal Promo,Limited time offer,False
