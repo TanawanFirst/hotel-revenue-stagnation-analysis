@@ -1,4 +1,3 @@
-# hotel-revenue-stagnation-analysis
 
 โครงการวิเคราะห์รายได้ห้องพักและปัจจัยที่มีผลต่อ Revenue Per Available Room (RevPAR) เพื่อสนับสนุนการวางแผนเชิงกลยุทธ์ด้านราคาและการบริหาร inventory ของโรงแรม "The Azure Stay" ด้วยวิธีการทาง Data Analytics
 
@@ -259,8 +258,6 @@
 | **รวม OTA (BDC + EXP)** | **4,067** | **51.06%** | — |
 | **รวม Direct (DIR + WAL)** | **3,095** | **38.86%** | — |
 
-> *[แทรกรูปกราฟ: สัดส่วน Booking แต่ละ Channel (Pie/Bar Chart)]*
-
 **ขั้นตอนที่ 2: เปรียบเทียบ Avg ADR vs Avg Net ADR ตาม Channel**
 
 | Channel | Avg ADR | Avg Net ADR | Avg Commission Loss/Booking | % ต่ำกว่า Direct |
@@ -271,7 +268,7 @@
 | CH_BDC | 4,160.61 | 3,536.52 | 624.09 | -15.09% |
 | CH_EXP | 4,153.35 | 3,405.75 | 747.60 | **-18.24%** |
 
-> *[แทรกรูปกราฟ: Avg ADR vs Net ADR by Channel (Clustered Bar)]*
+![Logo](https://cdn.discordapp.com/attachments/1166687471141146644/1503073318956433470/image.png?ex=6a02059c&is=6a00b41c&hm=59eda4fb388ad0daf35aee0353985cc2ec3ec16290faedee0b7a5bd079d844e0&)
 
 **ขั้นตอนที่ 3: เจาะลึก High Season — ช่วงที่ Demand สูงสุด**
 
@@ -286,9 +283,9 @@
 | CH_EXP | 1,039 | 27.19% | 4,120.66 | **-16.00%** |
 | **OTA รวม** | **1,898** | **49.67%** | — | — |
 
-> *[แทรกรูปกราฟ: Net ADR by Channel — High Season vs Low Season vs Shoulder]*
-
 **สรุป H1:** OTA ครองสัดส่วน 51.06% ของการจองทั้งปี และ 49.67% ใน High Season ทั้งที่เป็นช่วงที่ Direct channel ให้ Net ADR สูงกว่า OTA อยู่ 12–16% ส่งผลให้ Commission Loss สะสมตลอดปี (คำนวณจาก Commission × LOS) อยู่ที่ **8,867,711.52 บาท**
+
+![Logo](https://cdn.discordapp.com/attachments/1166687471141146644/1503074356056555622/image.png?ex=6a020694&is=6a00b514&hm=a75f42d0b066fc837fcc69f019a7253fcd1fc8afbe727cd5a9a4a4c752b05739&)
 
 ---
 
@@ -319,7 +316,7 @@
 | Seasonal Promo | 4,607.44 | 2,784.50 | 3,610.42 |
 | Non-Refundable | 4,384.35 | 2,757.15 | 3,187.80 |
 
-> *[แทรกรูปกราฟ: Avg ADR by Rate Code × Season (Clustered Bar)]*
+![Logo](https://cdn.discordapp.com/attachments/1166687471141146644/1503075096753868910/image.png?ex=6a020744&is=6a00b5c4&hm=5cc76ab3f7766c2e6894d42d8909231033b9ef69a90ef4f731958cee1f1355c5&)
 
 **ขั้นตอนที่ 3: คำนวณ Gap vs Rack Rate และ Revenue Loss ใน High Season**
 
@@ -333,7 +330,8 @@
 | Corporate Flat Rate | 786 | 5,309.44 | -1.85% | 78,505.68 |
 | **รวม** | **2,549** | — | — | **4,238,790.05** |
 
-> *[แทรกรูปกราฟ: Revenue Loss by Rate Code — High Season (Bar Chart)]*
+<img width="1020" height="673" alt="image" src="https://github.com/user-attachments/assets/388033af-15b9-420a-abbd-48a92d5f685a" />
+
 
 **สรุป H3:** 66.71% ของการจองใน High Season ยังใช้ rate code ที่มีส่วนลด โดย Non-Refundable มี ADR ต่ำกว่า Rack Rate ถึง 18.95% ทั้งที่ควรเป็น premium rate เนื่องจากไม่สามารถยกเลิกได้ รวม Revenue Loss ใน High Season **4,238,790.05 บาท**
 
@@ -351,7 +349,7 @@
 | Short Lead (8–30 วัน) | 4,537 | **45.37%** |
 | Long Lead (31–60 วัน) | 4,282 | 42.82% |
 
-> *[แทรกรูปกราฟ: จำนวน Booking แต่ละ BLT Group (Bar Chart)]*
+<img width="1283" height="345" alt="image" src="https://github.com/user-attachments/assets/1fc4cc41-330f-4df8-ab25-897e13557478" />
 
 **ขั้นตอนที่ 2: วิเคราะห์ Cancel Rate และ No-Show Rate ตาม BLT Group**
 
@@ -361,7 +359,8 @@
 | Short Lead (8–30 วัน) | 651 | 14.35% | 230 | 5.07% | 19.42% |
 | Long Lead (31–60 วัน) | 757 | **17.68%** | 206 | 4.81% | **22.49%** |
 
-> *[แทรกรูปกราฟ: Cancel Rate vs No-Show Rate by BLT Group (Clustered Bar)]*
+<img width="967" height="588" alt="image" src="https://github.com/user-attachments/assets/1efaabda-4d6c-403d-8a20-2a81bc5d2487" />
+
 
 **ขั้นตอนที่ 3: สรุปจำนวน Lost Bookings และ Phantom Inventory**
 
@@ -372,7 +371,8 @@
 | Long Lead | **963** | **22.49%** |
 | **รวมทั้งหมด** | **1,963** | **19.63% ของ booking ทั้งหมด** |
 
-> *[แทรกรูปกราฟ: จำนวน Lost Bookings by BLT Group (Bar Chart)]*
+<img width="1573" height="662" alt="image" src="https://github.com/user-attachments/assets/0a463f91-e09e-4110-9818-f5225dd5af49" />
+
 
 **สรุป H4:** กลุ่ม Long Lead (31–60 วัน) ซึ่งมีสัดส่วน 42.82% ของ booking ทั้งหมด มี Combined Loss Rate สูงสุดที่ 22.49% สูงกว่า Last Minute ถึง 2.23 เท่า รวม Lost Bookings ทั้งระบบ 1,963 รายการ คิดเป็น 19.63% ของ booking ทั้งปี ก่อให้เกิด Phantom Inventory และ Revenue Loss รวม **22,923,007.91 บาท**
 
@@ -399,7 +399,6 @@
 | Group | 230 | 10.02% | 5.09 | 5.03 |
 | Wholesale | 120 | 5.23% | 2.96 | 2.99 |
 
-> *[แทรกรูปกราฟ: Avg LOS Weekday vs Weekend by Segment (Clustered Bar)]*
 
 **ขั้นตอนที่ 3: วิเคราะห์ LOS=1 บนวันสุดสัปดาห์ตาม Segment**
 
@@ -414,7 +413,8 @@
 | Wholesale | 120 | 0 | 0.00% |
 | **รวม** | **2,296** | **433** | **18.86%** |
 
-> *[แทรกรูปกราฟ: % LOS=1 on Weekend by Segment (Bar Chart)]*
+<img width="1779" height="694" alt="image" src="https://github.com/user-attachments/assets/d536b975-8465-48ad-aa05-9789db4986ce" />
+
 
 **สรุป H5:** สมมติฐานเดิมระบุว่า Leisure เป็นต้นเหตุ แต่ข้อมูลจริงพบว่า **Business (51.04%)** และ **Transient (30.87%)** คือกลุ่มที่มี LOS=1 ในวันสุดสัปดาห์ ขณะที่ Leisure ซึ่งเป็น segment ใหญ่สุดในวันหยุด (40.11%) กลับไม่มี LOS=1 เลย รวม Revenue Loss จาก Orphan Nights **1,797,200.85 บาท**
 
